@@ -443,37 +443,40 @@
 
                 <!-- Form Side -->
                 <div class="p-10 lg:p-16 lg:w-3/5 bg-white">
-                    <form onsubmit="handleFormSubmit(event)" class="space-y-6">
+                    <form name="contact" method="POST" data-netlify="true" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        <!-- Hidden input necessary for Netlify Forms -->
+                        <input type="hidden" name="form-name" value="contact" />
+                        
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                                <input type="text" required class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-sage-500 focus:bg-white focus:ring-2 focus:ring-sage-200 outline-none transition-all" placeholder="John">
+                                <input type="text" name="first-name" required class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-sage-500 focus:bg-white focus:ring-2 focus:ring-sage-200 outline-none transition-all" placeholder="John">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                                <input type="text" required class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-sage-500 focus:bg-white focus:ring-2 focus:ring-sage-200 outline-none transition-all" placeholder="Doe">
+                                <input type="text" name="last-name" required class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-sage-500 focus:bg-white focus:ring-2 focus:ring-sage-200 outline-none transition-all" placeholder="Doe">
                             </div>
                         </div>
 
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                            <input type="email" required class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-sage-500 focus:bg-white focus:ring-2 focus:ring-sage-200 outline-none transition-all" placeholder="john@example.com">
+                            <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-sage-500 focus:bg-white focus:ring-2 focus:ring-sage-200 outline-none transition-all" placeholder="john@example.com">
                         </div>
 
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Service Interest</label>
-                            <select class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-sage-500 focus:bg-white focus:ring-2 focus:ring-sage-200 outline-none transition-all">
-                                <option>General Consultation</option>
-                                <option>Weight Management</option>
-                                <option>Diabetes/Medical Nutrition</option>
-                                <option>Gut Health</option>
-                                <option>Other</option>
+                            <select name="service" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-sage-500 focus:bg-white focus:ring-2 focus:ring-sage-200 outline-none transition-all">
+                                <option value="General Consultation">General Consultation</option>
+                                <option value="Weight Management">Weight Management</option>
+                                <option value="Diabetes/Medical Nutrition">Diabetes/Medical Nutrition</option>
+                                <option value="Gut Health">Gut Health</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
 
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-sage-500 focus:bg-white focus:ring-2 focus:ring-sage-200 outline-none transition-all" placeholder="Tell us briefly about your health goals..."></textarea>
+                            <textarea name="message" rows="4" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-sage-500 focus:bg-white focus:ring-2 focus:ring-sage-200 outline-none transition-all" placeholder="Tell us briefly about your health goals..."></textarea>
                         </div>
 
                         <button type="submit" class="w-full py-4 bg-sage-600 text-white rounded-lg font-bold text-lg hover:bg-sage-700 transition-all shadow-lg hover:shadow-xl">
@@ -550,30 +553,43 @@
             });
         });
 
-        // Form Submission Handling
+        // Form Submission Handling for Netlify
         function handleFormSubmit(event) {
             event.preventDefault();
             const btn = event.target.querySelector('button');
             const successMsg = document.getElementById('success-message');
+            const myForm = event.target;
+            const formData = new FormData(myForm);
             
-            // Simulate loading state
+            // Show loading state
             const originalText = btn.innerText;
             btn.innerText = 'Sending...';
             btn.disabled = true;
             btn.classList.add('opacity-75');
 
-            // Simulate API call
-            setTimeout(() => {
+            // Send data to Netlify via fetch
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString(),
+            })
+            .then(() => {
+                // Success
                 btn.innerText = originalText;
                 btn.disabled = false;
                 btn.classList.remove('opacity-75');
-                event.target.reset();
-                
+                myForm.reset();
                 successMsg.classList.remove('hidden');
                 setTimeout(() => {
                     successMsg.classList.add('hidden');
                 }, 5000);
-            }, 1500);
+            })
+            .catch((error) => {
+                // Error
+                btn.innerText = 'Error - Try Again';
+                btn.disabled = false;
+                alert('Oops! There was a problem submitting your form');
+            });
         }
 
         // Navbar Scroll Effect
