@@ -443,9 +443,13 @@
 
                 <!-- Form Side -->
                 <div class="p-10 lg:p-16 lg:w-3/5 bg-white">
-                    <form name="contact" method="POST" data-netlify="true" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                    <form name="contact" method="POST" action="/" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="handleFormSubmit(event)" class="space-y-6">
                         <!-- Hidden input necessary for Netlify Forms -->
                         <input type="hidden" name="form-name" value="contact" />
+                        <!-- Honeypot field (hidden from users) -->
+                        <div class="hidden">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </div>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
@@ -575,6 +579,7 @@
             })
             .then(() => {
                 // Success
+                console.log('Form submission successful');
                 btn.innerText = originalText;
                 btn.disabled = false;
                 btn.classList.remove('opacity-75');
@@ -586,9 +591,10 @@
             })
             .catch((error) => {
                 // Error
+                console.error('Form submission error:', error);
+                alert('Submission failed: ' + error.message);
                 btn.innerText = 'Error - Try Again';
                 btn.disabled = false;
-                alert('Oops! There was a problem submitting your form');
             });
         }
 
