@@ -81,10 +81,10 @@
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="#home" class="text-gray-600 hover:text-sage-600 font-medium transition-colors">Home</a>
-                    <a href="#about" class="text-gray-600 hover:text-sage-600 font-medium transition-colors">About</a>
                     <a href="#services" class="text-gray-600 hover:text-sage-600 font-medium transition-colors">Services</a>
+                    <a href="#about" class="text-gray-600 hover:text-sage-600 font-medium transition-colors">About</a>
                     <a href="#testimonials" class="text-gray-600 hover:text-sage-600 font-medium transition-colors">Stories</a>
-                    <a href="#contact" class="px-6 py-2.5 bg-sage-600 text-white rounded-full font-medium hover:bg-sage-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Book Consultation</a>
+                    <a href="#contact" class="px-6 py-2.5 bg-sage-600 text-white rounded-full font-medium hover:bg-sage-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Book Free Consultation</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -100,10 +100,10 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
             <div class="px-4 pt-2 pb-6 space-y-2 shadow-lg">
                 <a href="#home" class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-sage-600 hover:bg-sage-50 rounded-md">Home</a>
-                <a href="#about" class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-sage-600 hover:bg-sage-50 rounded-md">About</a>
                 <a href="#services" class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-sage-600 hover:bg-sage-50 rounded-md">Services</a>
+                <a href="#about" class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-sage-600 hover:bg-sage-50 rounded-md">About</a>
                 <a href="#testimonials" class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-sage-600 hover:bg-sage-50 rounded-md">Testimonials</a>
-                <a href="#contact" class="block px-3 py-3 text-base font-medium text-sage-600 bg-sage-50 rounded-md mt-4">Book Consultation</a>
+                <a href="#contact" class="block px-3 py-3 text-base font-medium text-sage-600 bg-sage-50 rounded-md mt-4">Book Free Consultation</a>
             </div>
         </div>
     </nav>
@@ -121,13 +121,18 @@
                     <div class="inline-flex items-center px-4 py-2 rounded-full bg-sage-100 text-sage-800 text-sm font-semibold mb-6 uppercase tracking-wider">
                         <i data-lucide="check-circle" class="w-4 h-4 mr-2"></i> Only Facts, No Fads!
                     </div>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-gray-900 leading-tight mb-6">
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-gray-900 leading-tight mb-6">
                         Personalized <span class="text-sage-600">Medical Nutrition</span> Therapy
                     </h1>
-                    <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                        By <strong>Palak Jain</strong>, MSc Clinical Nutrition, CDE.<br>
-                        Stop guessing with your health. Get a personalized nutrition plan tailored to your unique biochemistry, lifestyle, and goals.
-                    </p>
+                    <div class="text-lg text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        <p class="mb-4">
+                            By <span class="block text-3xl font-serif font-bold text-sage-800 mt-2">Palak Jain</span>
+                            <span class="block text-base font-medium text-gray-500 mb-4">MSc Clinical Nutrition, CDE</span>
+                        </p>
+                        <p>
+                            Stop guessing with your health. Get a personalized nutrition plan tailored to your unique biochemistry, lifestyle, and goals.
+                        </p>
+                    </div>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                         <a href="#contact" class="px-8 py-4 bg-sage-600 text-white rounded-full font-semibold hover:bg-sage-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2">
                             Start Your Journey <i data-lucide="arrow-right" class="w-5 h-5"></i>
@@ -151,15 +156,9 @@
 
                 <!-- Hero Image -->
                 <div class="lg:col-span-6 mt-16 lg:mt-0 relative fade-in-up delay-200">
-                    <div class="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5] max-w-md mx-auto lg:max-w-full group bg-sage-100 border-2 border-dashed border-sage-300">
-                        <!-- Placeholder for Nutritionist Image -->
-                        <div class="absolute inset-0 flex items-center justify-center">
-                           <div class="text-center p-6">
-                               <i data-lucide="image" class="w-16 h-16 text-sage-400 mx-auto mb-3"></i>
-                               <p class="text-sage-600 font-semibold">Place Your Photo Here</p>
-                               <p class="text-sage-500 text-sm mt-1">Recommended size: 600x800px</p>
-                           </div>
-                        </div>
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5] max-w-md mx-auto lg:max-w-full group">
+                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2053&auto=format&fit=crop" alt="Healthy balanced nutrition bowl" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        
                         <!-- Floating Card -->
                         <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-sage-100">
                             <div class="flex items-start gap-4">
@@ -179,7 +178,7 @@
     </section>
 
     <!-- Conditions We Treat -->
-    <section class="py-20 bg-white">
+    <section id="services" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-sage-600 font-semibold tracking-wide uppercase text-sm">Our Services</span>
@@ -187,7 +186,7 @@
                 <p class="mt-4 text-gray-600">Expert guidance tailored to your specific medical and lifestyle needs.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Item 1 -->
                 <div class="p-8 rounded-2xl bg-sage-50 hover:bg-sage-100 transition-colors duration-300 text-center group">
                     <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform">
@@ -203,23 +202,83 @@
                         <i data-lucide="activity" class="w-8 h-8 text-sage-600"></i>
                     </div>
                     <h3 class="font-serif font-bold text-xl text-gray-900 mb-3">Diabetes Reversal</h3>
-                    <p class="text-sm text-gray-600">Targeted nutrition to manage blood sugar levels, PCOS, and Hypothyroid conditions.</p>
+                    <p class="text-sm text-gray-600">Targeted nutrition therapy for diabetes reversal and management.</p>
                 </div>
 
                 <!-- Item 3 -->
                 <div class="p-8 rounded-2xl bg-sage-50 hover:bg-sage-100 transition-colors duration-300 text-center group">
                     <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform">
-                        <i data-lucide="apple" class="w-8 h-8 text-sage-600"></i>
+                        <i data-lucide="heart-pulse" class="w-8 h-8 text-sage-600"></i>
                     </div>
-                    <h3 class="font-serif font-bold text-xl text-gray-900 mb-3">Gut Health</h3>
-                    <p class="text-sm text-gray-600">Specialized plans for digestive health issues, bloating, and food sensitivities.</p>
+                    <h3 class="font-serif font-bold text-xl text-gray-900 mb-3">Chronic Health</h3>
+                    <p class="text-sm text-gray-600">Manage medical conditions like heart, kidney and gut health.</p>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="p-8 rounded-2xl bg-sage-50 hover:bg-sage-100 transition-colors duration-300 text-center group">
+                    <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="flower-2" class="w-8 h-8 text-sage-600"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-gray-900 mb-3">PCOS & Hormonal</h3>
+                    <p class="text-sm text-gray-600">Specialized nutrition plans for PCOS and other hormonal conditions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-20 bg-sage-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-sage-300 font-semibold tracking-wide uppercase text-sm">How It Works</span>
+                <h2 class="mt-2 text-3xl sm:text-4xl font-serif font-bold text-white">Your Path to Wellness</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                <!-- Connecting Line (Desktop) -->
+                <div class="hidden lg:block absolute top-12 left-12 right-12 h-0.5 bg-sage-600 z-0"></div>
+
+                <!-- Step 1 -->
+                <div class="relative z-10 text-center">
+                    <div class="w-24 h-24 bg-sage-700 rounded-full flex items-center justify-center mx-auto border-4 border-sage-600 mb-6 transition-transform hover:scale-110">
+                        <span class="font-serif text-3xl font-bold">01</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Detailed Assessment</h3>
+                    <p class="text-sage-200 px-2 text-sm">Reviewing your medical history, bloodwork, lifestyle, and dietary preferences in a deep-dive session.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative z-10 text-center">
+                    <div class="w-24 h-24 bg-sage-700 rounded-full flex items-center justify-center mx-auto border-4 border-sage-600 mb-6 transition-transform hover:scale-110">
+                        <span class="font-serif text-3xl font-bold">02</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Sustainable Nutrition Plan</h3>
+                    <p class="text-sage-200 px-2 text-sm">Receive a personalized meal plan and lifestyle modifications that fit your daily routine.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative z-10 text-center">
+                    <div class="w-24 h-24 bg-sage-700 rounded-full flex items-center justify-center mx-auto border-4 border-sage-600 mb-6 transition-transform hover:scale-110">
+                        <span class="font-serif text-3xl font-bold">03</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Track Progress</h3>
+                    <p class="text-sage-200 px-2 text-sm">Regular follow-ups to monitor changes, discuss challenges, and tweak the plan for optimal results.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative z-10 text-center">
+                    <div class="w-24 h-24 bg-white text-sage-800 rounded-full flex items-center justify-center mx-auto border-4 border-sage-600 mb-6 shadow-lg transition-transform hover:scale-110">
+                        <span class="font-serif text-3xl font-bold">04</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Achieve & Maintain</h3>
+                    <p class="text-sage-200 px-2 text-sm">Reach your health goals and learn the tools to sustain your progress for a lifetime.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 lg:py-28 overflow-hidden">
+    <section id="about" class="py-20 lg:py-28 overflow-hidden bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:grid lg:grid-cols-2 gap-16 items-center">
                 <div class="relative order-2 lg:order-1">
@@ -239,78 +298,32 @@
                 
                 <div class="order-1 lg:order-2 mb-12 lg:mb-0">
                     <span class="text-sage-600 font-semibold tracking-wide uppercase text-sm">About Me</span>
-                    <h2 class="mt-2 text-3xl sm:text-4xl font-serif font-bold text-gray-900 mb-6">Palak Jain</h2>
-                    <h3 class="text-xl text-sage-700 font-medium mb-6">MSc Clinical Nutrition, CDE</h3>
+                    <h2 class="mt-2 text-3xl sm:text-4xl font-serif font-bold text-gray-900 mb-4">Palak Jain</h2>
+                    <h3 class="text-xl text-sage-700 font-medium mb-6">MSc Clinical Nutrition | Certified Diabetes Educator</h3>
                     
-                    <div class="prose prose-lg text-gray-600 mb-8">
+                    <div class="prose prose-lg text-gray-600 mb-8 text-base">
                         <p class="mb-4">
-                            Hi! I am a Clinical Dietitian and a Certified Diabetes Educator. 
+                            Palak Jain is a dedicated Clinical Nutritionist and Certified Diabetes Educator with over 5 years of experience across prestigious hospitals and innovative health-tech startups. With a Bachelors of Honors in Nutrition and Dietetics from Punjab Agricultural University and a Master’s in Clinical Nutrition from SNDT University, Mumbai, Palak’s expertise is rooted in deep academic and clinical rigor.
                         </p>
-                        <p>
-                            Having <strong>6+ years of education</strong> in this field and <strong>5+ years of experience</strong> working at both hospitals as well as digital setups, I am here to deliver expert nutrition guidance that is tailored to your unique needs!
+                        <p class="mb-6">
+                            Her career began in the intensive clinical settings of Max Hospital (Saket, Delhi) and CMCH Ludhiana, where she managed complex chronic diseases through medical nutrition therapy. Transitioning into the digital health space with startups like Sugarfit, she has been instrumental in the field of diabetes reversal, helping clients achieve metabolic health through data-backed lifestyle interventions.
                         </p>
                     </div>
 
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check" class="text-sage-600 w-5 h-5"></i>
-                            <span>Hospital & Digital Experience</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check" class="text-sage-600 w-5 h-5"></i>
-                            <span>Certified Diabetes Educator (CDE)</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check" class="text-sage-600 w-5 h-5"></i>
-                            <span>Evidence-Based Practice</span>
-                        </li>
-                    </ul>
+                    <!-- Vision Segment -->
+                    <div class="bg-sage-50 p-6 rounded-xl border-l-4 border-sage-500 mb-8">
+                        <h4 class="font-serif font-bold text-lg text-sage-800 mb-3">My Vision</h4>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                            Palak believes that the key to a healthier life lies in sustainability. In an industry often filled with "quick fixes," her mission is to deliver science-based nutrition guidance tailored to the unique biological and lifestyle needs of every individual.
+                        </p>
+                        <p class="italic text-sage-700 font-medium text-sm">
+                            "I believe in achieving your health goals in a way that builds habits for a lifetime. My goal is to empower you with the tools to make lasting changes, ensuring your journey to wellness is as enduring as it is effective."
+                        </p>
+                    </div>
 
                     <a href="#contact" class="text-sage-600 font-bold hover:text-sage-800 flex items-center gap-2 group">
                         Book a Consultation <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
                     </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section id="services" class="py-20 bg-sage-800 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-sage-300 font-semibold tracking-wide uppercase text-sm">How It Works</span>
-                <h2 class="mt-2 text-3xl sm:text-4xl font-serif font-bold text-white">Your Path to Wellness</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-                <!-- Connecting Line (Desktop) -->
-                <div class="hidden md:block absolute top-12 left-1/6 right-1/6 h-0.5 bg-sage-600 z-0"></div>
-
-                <!-- Step 1 -->
-                <div class="relative z-10 text-center">
-                    <div class="w-24 h-24 bg-sage-700 rounded-full flex items-center justify-center mx-auto border-4 border-sage-600 mb-6">
-                        <span class="font-serif text-3xl font-bold">01</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Assessment</h3>
-                    <p class="text-sage-200 px-4">We review your medical history, bloodwork, lifestyle, and dietary preferences in a deep-dive session.</p>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="relative z-10 text-center">
-                    <div class="w-24 h-24 bg-sage-700 rounded-full flex items-center justify-center mx-auto border-4 border-sage-600 mb-6">
-                        <span class="font-serif text-3xl font-bold">02</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Personalized Plan</h3>
-                    <p class="text-sage-200 px-4">Receive a custom meal guide, supplement recommendations, and lifestyle modifications tailored to you.</p>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="relative z-10 text-center">
-                    <div class="w-24 h-24 bg-white text-sage-800 rounded-full flex items-center justify-center mx-auto border-4 border-sage-600 mb-6 shadow-lg">
-                        <span class="font-serif text-3xl font-bold">03</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Support & Results</h3>
-                    <p class="text-sage-200 px-4">Regular follow-ups to track progress, adjust the plan, and celebrate your health milestones.</p>
                 </div>
             </div>
         </div>
@@ -402,7 +415,7 @@
                                 </div>
                                 <div>
                                     <p class="text-xs text-sage-300 uppercase">Call/DM</p>
-                                    <p class="font-medium">+917986612485</p>
+                                    <p class="font-medium">7986612485</p>
                                 </div>
                             </div>
                             <div class="flex items-center gap-4">
@@ -411,7 +424,7 @@
                                 </div>
                                 <div>
                                     <p class="text-xs text-sage-300 uppercase">Email</p>
-                                    <p class="font-medium">hello@eatkind.in</p>
+                                    <p class="font-medium">hello.eatkind@gmail.com</p>
                                 </div>
                             </div>
                             <div class="flex items-center gap-4">
@@ -426,10 +439,11 @@
                         </div>
                     </div>
 
-                    <div class="mt-12 flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full border border-sage-600 flex items-center justify-center hover:bg-sage-700 transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full border border-sage-600 flex items-center justify-center hover:bg-sage-700 transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-                        <a href="https://www.linkedin.com/in/palak-jain-5416131a6/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-sage-600 flex items-center justify-center hover:bg-sage-700 transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                    <div class="mt-12">
+                        <a href="https://www.linkedin.com/in/palak-jain-5416131a6/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-6 py-3 border border-sage-600 rounded-full hover:bg-sage-700 transition-colors group">
+                            <i data-lucide="linkedin" class="w-5 h-5 text-sage-300 group-hover:text-white"></i>
+                            <span class="font-medium">Connect on LinkedIn</span>
+                        </a>
                     </div>
                 </div>
 
@@ -455,8 +469,13 @@
                         </div>
 
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                            <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-sage-500 focus:bg-white focus:ring-2 focus:ring-sage-200 outline-none transition-all" placeholder="john@example.com">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Contact Number</label>
+                            <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-sage-500 focus:bg-white focus:ring-2 focus:ring-sage-200 outline-none transition-all" placeholder="+91 98765 43210">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address <span class="text-gray-400 font-normal text-xs">(Optional)</span></label>
+                            <input type="email" name="email" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-sage-500 focus:bg-white focus:ring-2 focus:ring-sage-200 outline-none transition-all" placeholder="john@example.com">
                         </div>
 
                         <div>
@@ -464,8 +483,9 @@
                             <select name="service" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-sage-500 focus:bg-white focus:ring-2 focus:ring-sage-200 outline-none transition-all">
                                 <option value="Weight Management">Weight Management</option>
                                 <option value="Diabetes Reversal">Diabetes Reversal</option>
-                                <option value="PCOS/Hypothyroid">PCOS/Hypothyroid</option>
-                                <option value="Gut Health">Gut Health</option>
+                                <option value="Chronic Health">Chronic Health (Heart/Kidney/Gut)</option>
+                                <option value="PCOS/Hormonal">PCOS & Hormonal Conditions</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
 
